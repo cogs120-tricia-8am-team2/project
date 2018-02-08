@@ -203,7 +203,7 @@ a {
 }
 
 .nav-images{
-  margin-top: 1em;
+  padding-top: 1em;
 }
 
 .nav-images img {
@@ -212,4 +212,9 @@ a {
 
 .nav-title {
   font-size: 1em;
+}
+
+.nav-divider{
+  border-right: 1px solid #efefef;
+
 }
