@@ -50,48 +50,6 @@ a {
   text-align: right;
 }
 
-.page-media{
-  margin-top: 4.5rem;
-  height: 100vw;
-  background-color: gray;
-}
-
-.page-media-more {
-  position: relative;
-  top: 10vw;
-  right: 10vw;
-  text-align: right;
-}
-
-#page-media-title{
-  position: relative;
-  top: -0.4rem;
-  left: 0.7rem;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-#page-madia-caption{
-  position: relative;
-  top: 1rem;
-  left: -10rem;
-  text-align: left;
-
-
-  font-size: 1rem;
-
-}
-
-
-
-
-
-
-
-
-
-
-
 .nav-container {
   background-color: #DFDFDF;
   position: fixed;

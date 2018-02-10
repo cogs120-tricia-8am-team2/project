@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>APP</title>
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="/css/materialize.css"  media="screen,projection"/>
-  <link rel="stylesheet" href="../css/play.css">
+  <link rel="stylesheet" href="/css/info.css">
 </head>
 
 <body>
@@ -15,17 +15,17 @@
     <div class="pageTitle-container">
 
         <div class="page-back">
-          <a href="/"> &lt; Back  </a>
+          <a href="/play/{{categoryTitle}}"> &lt; Back  </a>
         </div>
 
 
       <div class="page-title">
-        {{pageTitle}}
+        {{itemId}}
       </div>
 
 
         <div class="page-filter">
-          Filter
+
         </div>
 
 
@@ -36,23 +36,9 @@
 
 
 <div class="pageContent-container">
-  <div class="page-media">
 
-  </div>
 
-  <div  class="page-media-more fixed-action-btn horizontal click-to-toggle">
-    <span id="page-media-title">Media Title</span>
-    <span id="page-madia-caption">Media Caption</span>
-      <a id="moreBtn" class="btn-floating btn-large red">
-        <i class="material-icons">+</i>
-      </a>
-      <ul>
-        <li><a class="btn-floating "><i class="material-icons">Share</i></a></li>
-        <li><a class="btn-floating darken-1 "><i class="material-icons">Save</i></a></li>
-        <li><a class="btn-floating "><i class="material-icons">Like</i></a></li>
-        <li><a href="/play/{{pageTitle}}/MediaTitle/info" class="btn-floating "><i class="material-icons">Info</i></a></li>
-      </ul>
-    </div>
+
 </div>
 
 
@@ -69,7 +55,7 @@
       <a href="/">
         <div class="home nav-divider">
           <div class="nav-images">
-            <img src="../images/icons/home-100.png" alt="home button">
+            <img src="/images/icons/home-100.png" alt="home button">
           </div>
           <div class="nav-title">
             Home
@@ -80,7 +66,7 @@
       <a href="/">
         <div class="browse nav-divider">
           <div class="nav-images">
-            <img src="../images/icons/browse-100.png" alt="browse button">
+            <img src="/images/icons/browse-100.png" alt="browse button">
           </div>
           <div class="nav-title">
             Browse
@@ -90,7 +76,7 @@
       <a href="/">
         <div class="profile nav-divider">
           <div class="nav-images">
-            <img src="../images/icons/profile-100.png" alt="profile button">
+            <img src="/images/icons/profile-100.png" alt="profile button">
           </div>
           <div class="nav-title">
             Profile
@@ -101,7 +87,7 @@
       <a href="/">
         <div class="search">
           <div class="nav-images">
-            <img src="../images/icons/search-100.png" alt="search button">
+            <img src="/images/icons/search-100.png" alt="search button">
           </div>
           <div class="nav-title">
             Search
