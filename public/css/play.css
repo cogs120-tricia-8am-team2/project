@@ -6,7 +6,6 @@
 html, body{
   height: 100%;
   width: 100%;
-  overflow: hidden;
 }
 
 a {
@@ -17,6 +16,7 @@ a {
   height: 100%;
   min-height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 .pageTitle-container{
@@ -24,39 +24,35 @@ a {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "Back Title Options";
-  padding-top: 2em;
+  grid-template-areas: "Back Title Filter";
+  padding-top: 1rem;
   background-color: #DFDFDF;
+  position:fixed;
+  width: 100%;
 }
 
 .page-Title{
-  font-size: 5em;
+  font-size: 2rem;
   grid-area: Title;
-  text-align: center;
-}
-
-.page-Back, .page-options{
-  margin: 1em;
-}
-
-.page-Back {
-  font-size: 1em;
-  color: red;
-}
-
-.page-Options {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  font-size: 2em;
+  justify-content: center;
+}
+
+.page-Back, .page-Filter{
+  margin: 1rem;
+  font-size: 1.3rem;
   color: red;
-
 }
 
-.play-image{
-
+.page-Filter{
+  text-align: right;
 }
+
+
+
+
 
 /*
 .play-image::after {
@@ -91,9 +87,18 @@ a {
 }
 
 .nav-images{
-  margin-top: 1em;
+  padding-top: 1rem;
+}
+
+.nav-images img {
+  width:3rem;
 }
 
 .nav-title {
-  font-size: 2em;
+  font-size: 1.3rem;
+}
+
+.nav-divider{
+  border-right: 1px solid #efefef;
+
 }

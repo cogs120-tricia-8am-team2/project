@@ -14,10 +14,11 @@ a {
 .page-container {
   height: 100%;
   min-height: 100%;
+  overflow: hidden;
 }
 
 .pageTitle-container{
-  margin: 2em auto;
+  margin: 2rem auto;
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 3fr 2fr;
@@ -25,28 +26,34 @@ a {
 }
 
 .page-Title{
-  font-size: 2em;
+  font-size: 4rem;
   grid-area: Title;
   text-align: center;
 }
 
 .page-Search{
   grid-area: Search;
-  font-size: 0.5em;
+  font-size: 0.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
 }
 
 .search-50 {
-  padding: 0.5em 2em;
+  padding: 0.5rem 2rem;
   border: 1px solid #DFDFDF;
-  border-radius: 0.5em;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .search-50 span {
-  font-size: 1.8em;
+  font-size: 1.8rem;
 }
 
 .search-50 img {
@@ -54,43 +61,42 @@ a {
 }
 
 .categories-container {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5rem;
 }
 .content-container{
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 3fr 1fr;
   grid-template-areas: "Title More";
-  margin:1em;
-  margin-bottom: 0.2em;
+  margin:1rem;
+  margin-bottom: 0.2rem;
 }
 
 .categories-button{
-  margin: 0 1em;
+  margin: 0 1rem;
 }
 
 .categories img {
-  width: 7%;
-
+  width: 2.5rem;
   height: auto;
 }
 
 .content-Title{
-  font-size: 1.3em;
+  font-size: 1.8rem;
   font-weight: bold;
 }
 
 .content-More {
   text-align: right;
-  font-size: 1em;
+  font-size: 1.3rem;
   color: red;
   margin: auto 0;
 }
 
 .categories{
   border: 1px solid #DFDFDF;
-  font-size: 2em;
-  padding: 0.25em;
+  font-size: 3rem;
+  padding: 0.25rem;
   position: relative;
   display: flex;
   align-items: center;
@@ -106,7 +112,7 @@ a {
 
 .recently{
   height: 35vw;
-  margin: 0 1em;
+  margin: 0 1rem;
   border: 1px solid #DFDFDF;
   text-align: center;
   display: flex;
@@ -116,78 +122,10 @@ a {
 }
 
 .recently p {
-  font-size: 3em;
+  font-size: 3rem;
 
 }
 
-
-#activites::after {
-  background-image: url("../images/category-background/activites.jpg");
-  background-position: center center;
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  opacity: 0.7;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-
-#food::after {
-  background-image:  url("../images/category-background/food.jpg");
-  background-position: center center;
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  opacity: 0.7;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-
-#travel::after {
-  background-image:  url("../images/category-background/travel.jpg");
-  background-position: center right;
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  opacity: 0.7;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-
-#reading::after {
-  background-image:  url("../images/category-background/reading.jpg");
-  background-position: center right;
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  opacity: 0.7;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
 
 
 .nav-container {
@@ -203,15 +141,15 @@ a {
 }
 
 .nav-images{
-  padding-top: 1em;
+  padding-top: 1rem;
 }
 
 .nav-images img {
-  width:30%;
+  width:3rem;
 }
 
 .nav-title {
-  font-size: 1em;
+  font-size: 1.3rem;
 }
 
 .nav-divider{
