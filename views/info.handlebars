@@ -8,6 +8,8 @@
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="/css/materialize.css"  media="screen,projection"/>
   <link rel="stylesheet" href="/css/info.css">
+  <link href="/css/profile.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -135,8 +137,15 @@
 
 
 
+    <!-- SPACE FOR POPUP -->
+    <div id="profile_popup" class="modal">
+      </div>
+
+
+    <!-- BOTTOM NAVIGATION BAR -->
     <div class="nav-container">
 
+      <!-- Home -->
       <a href="/">
         <div class="home nav-divider">
           <div class="nav-images">
@@ -148,6 +157,7 @@
         </div>
       </a>
 
+      <!-- Browse -->
       <a href="/">
         <div class="browse nav-divider">
           <div class="nav-images">
@@ -158,7 +168,9 @@
           </div>
         </div>
       </a>
-      <a href="/">
+
+      <!-- Profile -->
+      <a href="/profile_popup.html" data-toggle="modal" data-target="#profile_popup">
         <div class="profile nav-divider">
           <div class="nav-images">
             <img src="/images/icons/profile-100.png" alt="profile button">
@@ -169,6 +181,9 @@
 
         </div>
       </a>
+
+
+      <!-- Search -->
       <a href="/">
         <div class="search">
           <div class="nav-images">
@@ -180,6 +195,7 @@
         </div>
       </a>
     </div>
+
   </div>
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
