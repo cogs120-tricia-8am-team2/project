@@ -12,6 +12,22 @@
 
 <body>
   <div class="page-container">
+    <div class="share-background">
+      <div class="share-box">
+        <div class="box-outline">
+          <div class="box-content">
+            Content
+          </div>
+
+          <div id="cancel" class="box-btn borderRight">
+            Cancel
+          </div>
+          <div id="send" class="box-btn">
+            Send
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="pageTitle-container">
 
         <div class="page-back">
@@ -48,7 +64,7 @@
         <i class="material-icons">+</i>
       </a>
       <ul>
-        <li><a class="btn-floating "><i class="material-icons">Share</i></a></li>
+        <li><a id="share-btn" class="btn-floating "><i class="material-icons">Share</i></a></li>
         <li><a class="btn-floating darken-1 "><i class="material-icons">Save</i></a></li>
         <li><a class="btn-floating "><i class="material-icons">Like</i></a></li>
         <li><a href="/play/{{pageTitle}}/MediaTitle/info" class="btn-floating "><i class="material-icons">Info</i></a></li>
@@ -78,7 +94,7 @@
         </div>
       </a>
 
-      <a href="/">
+      <a href="/browse">
         <div class="browse nav-divider">
           <div class="nav-images">
             <img src="/images/icons/browse-100.png" alt="browse button">
