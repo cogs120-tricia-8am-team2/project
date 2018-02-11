@@ -1,6 +1,20 @@
 var data = require('../data.json');
 
 exports.view = function(req, res){
-  console.log(req);
-	res.render('web', data);
+  var categoryTitle = req.params.categoryTitle;
+  var itemId = req.params.itemId;
+  var web = req.params.web;
+  console.log(categoryTitle);
+  console.log(itemId);
+  console.log(req.params);
+
+
+	res.render('web', {
+    'categoryTitle': categoryTitle,
+    'itemId' : itemId,
+    'web' : web
+
+
+
+  });
 };

@@ -16,7 +16,7 @@ a {
   height: 100%;
   min-height: 100%;
   width: 100%;
-  overflow:scroll;
+  overflow: scroll;
 }
 
 .pageTitle-container{
@@ -50,60 +50,6 @@ a {
   text-align: right;
 }
 
-.page-media{
-  margin-top: 4.5rem;
-  height: 100vw;
-  background-color: gray;
-  position: relative;
-}
-
-.page-media img {
-  position: absolute;
-  width: 5rem;
-  top: 40vw;
-}
-
-#arrow-left {
-  left: 0;
-}
-
-#arrow-right {
-  right:0
-}
-
-.page-media-more {
-  position: relative;
-  top: 5vw;
-  right: 10vw;
-  text-align: right;
-}
-
-#page-media-title{
-  position: relative;
-  top: -1vw;
-  left: 1vw;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-#page-madia-caption{
-  position: relative;
-  top: 4vw;
-  left: -35vw;
-  text-align: left;
-  font-size: 1rem;
-
-}
-
-
-
-
-
-
-
-
-
-
 
 .nav-container {
   background-color: #DFDFDF;
@@ -132,4 +78,8 @@ a {
 .nav-divider{
   border-right: 1px solid #efefef;
 
+}
+
+.pageContent-container{
+  margin-top: 4.5rem;
 }
