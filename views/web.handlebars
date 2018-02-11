@@ -6,47 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>APP</title>
   <link href="/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/play.css">
+  <link type="text/css" rel="stylesheet" href="/css/materialize.css"  media="screen,projection"/>
+  <link rel="stylesheet" href="/css/web.css">
   <link href="/css/profile.css" rel="stylesheet">
 </head>
 
 <body>
   <div class="page-container">
     <div class="pageTitle-container">
-
         <div class="page-back">
-          <a href="/"> &lt; Back  </a>
+          <a href="/play/{{categoryTitle}}/{{itemId}}/info"> &lt; Back  </a>
         </div>
-
-
       <div class="page-title">
-        {{pageTitle}}
+        {{web}}
       </div>
 
 
-        <div class="page-filter">
-          Filter
-        </div>
+      <div class="page-filter">
+        Save
+      </div>
 
 
     </div>
 
+    <div class="pageContent-container">
+      <iframe src="https://www.californiabeaches.com/beach/la-jolla-shores-beach" width="100%" height="800"></iframe>
 
 
-
-
-<div class="pageContent-container">
-  <div class="page-media">
-
-  </div>
-
-
-</div>
-
-
-
-
-
+    </div>
 
 
     <!-- SPACE FOR POPUP -->
@@ -70,7 +57,7 @@
       </a>
 
       <!-- Browse -->
-      <a href="/">
+      <a href="/browse">
         <div class="browse nav-divider">
           <div class="nav-images">
             <img src="/images/icons/browse-100.png" alt="browse button">
@@ -94,7 +81,6 @@
         </div>
       </a>
 
-
       <!-- Search -->
       <a href="/">
         <div class="search">
@@ -107,7 +93,6 @@
         </div>
       </a>
     </div>
-
 
   </div>
 

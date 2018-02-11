@@ -165,11 +165,11 @@ a {
   grid-template-areas:
   "Title Price";
 }
-.weather div{
+.weather a div{
   width: 100%;
 }
 
-.weather div, .weather-icon img{
+.weather a div, .weather-icon img{
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -185,7 +185,6 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border-left: 1px solid #DFDFDF;
 }
 
 #temp-f, #temp-c, .temp-div{
@@ -215,7 +214,15 @@ a {
 }
 .box-title{
   position: relative;
+  width: 100%;
+
+}
+
+.box-a {
   background-color: #cFcFcF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .next{
@@ -225,4 +232,5 @@ a {
 
 .price {
   font-size: 1rem;
+  margin: 1rem;
 }

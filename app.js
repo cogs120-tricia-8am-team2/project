@@ -12,6 +12,7 @@ var index = require('./routes/index');
 var play = require('./routes/play');
 var info = require('./routes/info');
 var web = require('./routes/web');
+var browse = require('./routes/browse');
 // Example route
 // var user = require('./routes/user');
 
@@ -42,6 +43,7 @@ app.get('/play/:categoryTitle', play.view);
 app.get('/play/:categoryTitle/:itemId', play.view);
 app.get('/play/:categoryTitle/:itemId/info', info.view);
 app.get('/play/:categoryTitle/:itemId/info/:web', web.view);
+app.get('/browse', browse.view);
 // Example route
 // app.get('/users', user.list);
 

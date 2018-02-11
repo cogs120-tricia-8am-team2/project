@@ -12,11 +12,18 @@ a {
   text-decoration: none;
 }
 
+
+
 .page-container {
   height: 100%;
   min-height: 100%;
   width: 100%;
-  overflow:scroll;
+  overflow: scroll;
+
+}
+
+.overflowHidden{
+  overflow: hidden;
 }
 
 .pageTitle-container{
@@ -54,6 +61,21 @@ a {
   margin-top: 4.5rem;
   height: 100vw;
   background-color: gray;
+  position: relative;
+}
+
+.page-media img {
+  position: absolute;
+  width: 5rem;
+  top: 40vw;
+}
+
+#arrow-left {
+  left: 0;
+}
+
+#arrow-right {
+  right:0
 }
 
 .page-media-more {
@@ -80,15 +102,65 @@ a {
 
 }
 
+.share-box {
+  visibility: hidden;
+  height: 0;
+  top : 5rem;
+  position: absolute;
+  padding: 2rem 2rem;
+
+}
+.share-background{
+  background-color: gray;
+}
+
+.height100vh{
+  height: 100vh;
+  position: relative;
+}
 
 
+.visibilityVisible-box {
+  visibility:visible;
+  height: 100vw;
+  width: 100vw;
+
+}
 
 
+.visibilityHidden {
+  visibility: hidden;
+}
 
+.box-outline{
+  width: 100%;
+  height: 100%;
+  border: 1px solid #afafaf;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 5fr 1fr;
+  grid-template-areas:
+    "content content"
+    "cancel done";
+  background-color: white;
+}
+.box-content {
+  grid-area: content;
+}
 
+.box-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #afafaf;
+  font-size: 2rem;
 
+}
 
-
+.borderRight{
+  border-right: 1px solid #afafaf;
+}
 
 .nav-container {
   background-color: #DFDFDF;
