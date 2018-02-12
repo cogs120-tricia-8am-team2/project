@@ -93,8 +93,13 @@ a {
 }
 
 .page-box{
-  margin: 0 1rem;
+  margin: auto 1rem;
   border: 1px solid #DFDFDF;
+
+}
+
+.page-box input{
+  margin-top: 1rem;
 }
 
 
