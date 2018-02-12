@@ -4,75 +4,52 @@
 <head>
 	<title>APP</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection"/>
-	<link href="/css/index.css" rel="stylesheet">
+	<link href="/css/preference.css" rel="stylesheet">
 </head>
 
 <body>
 
 	<div class="page-container">
-		<div class="pageTitle-container">
-			<div class="page-Title">
-				APP LOGO
-			</div>
-			<div class="page-Search">
-				<div class="search-50">
-					<img src="/images/icons/search-50.png" alt="search button"><span> Search</span>
+
+		<div class="categories-container">
+			<div class="preference-container">
+				<div class="preference-confirm" align="center">
+						Confirm
+				</div>
+				<div class="preference-Title">
+					<h3>Select your prefered categories.</h3>
+				</div>
+				<div class="content-skip">
+					<p align="right">skip this step</p>
 				</div>
 
-			</div>
-		</div>
-		<div class="categories-container">
-			<div class="content-container">
-				<div class="content-Title">
-					Popular Categories
+			    <div class="preference-Search">
+				    <div class="search-50" align="right">
+						<img src="/images/icons/search-50.png" alt="search button"><span> Search</span>
+				    </div>
 				</div>
-				<div class="content-More">
-					<a href="/browse">More &gt;</a>
-				</div>
+
 			</div>
 			<div class="categories-button">
-				<a href="/play/Random">
-					<div class="categories">
-						Random <img src="/images/icons/random-100.png" alt="random play icon" height="70">
-					</div>
-				</a>
 
-				{{#each categories}}
-					<a href="/play/{{title}}">
+				{{#each allcategories}}
+				        <form> 
+				        	<input type ="checkbox" id="{{id}}" name="{{id}}" value="{{title}}">
+				        	<label for = "{{id}}">{{title}}</label>
 
-						<div id="{{id}}" class="categories">
-							{{title}}
-						</div>
-
-					</a>
+				        </form>
+						  						
 				{{/each}}
 			</div>
 
 		</div>
-		<div class="recently-container">
-			<div class="content-container">
-				<div class="content-Title">
-					Browsing History
-				</div>
-				<div class="content-More">
-					More &gt;
-				</div>
-			</div>
-			<div class="recently-button">
+    <div class="nav-cover">
 
-				<div class="recently">
-
-				</div>
-
-				<div class="recently">
-
-				</div>
-			</div>
-		</div>
+    </div>
 
 
 
@@ -101,7 +78,7 @@
 					</div>
 				</div>
 			</a>
-			<a href="/preference">
+			<a href="/">
 				<div class="profile nav-divider">
 					<div class="nav-images">
 						<img src="/images/icons/profile-100.png" alt="profile button">
@@ -127,7 +104,7 @@
 
 	<script src="/js/jquery-1.11.0.js"></script>
 	<script src="/js/bootstrap.js"></script>
-	<script src="/js/index.js"></script>
+
 </body>
 
 </html>
