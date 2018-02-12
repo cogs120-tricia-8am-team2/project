@@ -13,6 +13,7 @@ var play = require('./routes/play');
 var info = require('./routes/info');
 var web = require('./routes/web');
 var browse = require('./routes/browse');
+var share = require('./routes/share');
 // Example route
 // var user = require('./routes/user');
 
@@ -41,6 +42,7 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/play/:categoryTitle', play.view);
 app.get('/play/:categoryTitle/:itemId', play.view);
+app.get('/play/:categoryTitle/:itemId/share', share.view);
 app.get('/play/:categoryTitle/:itemId/info', info.view);
 app.get('/play/:categoryTitle/:itemId/info/:web', web.view);
 app.get('/browse', browse.view);
