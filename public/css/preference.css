@@ -43,7 +43,11 @@
 	margin-left: 50px;
 }
 
+.page-back{
+	margin: 10px;
+}
 .preference-confirm {
+	margin-top: 30px;
 	top: 0px;
 	right: 0px;
 	left: max-content;
@@ -75,20 +79,12 @@ input[type=checkbox] + label{
 	border-top-style: solid;
 
 }
-/*input[type=checkbox] + label:before{
-	content: "\2714";
-	border: 0.1em;
-	border-radius:0.2em;
-	display:inline-block;
-	width:1em;
-	height: 1em;
-	padding: 1em;
-	color:transparent;
 
 
 
-}*/
+       
 input[type=checkbox]:checked + label:before{
 	background-color: grey;
 	border-color: grey;
+
 }
