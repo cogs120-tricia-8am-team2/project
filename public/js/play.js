@@ -10,6 +10,8 @@ $(document).ready(function() {
   $('#exitSharing').click(function(){
     $('.nav-share').hide();
     $('.nav-container').show();
+    $('#back').show();
+
   });
 
   $('#enterChatroom').click(function(){
@@ -18,6 +20,7 @@ $(document).ready(function() {
     $('.chat-view').removeClass('displayNone');
     $('#exitChatroom').removeClass('displayNone');
     $('#up').removeClass('displayNone');
+    $('#back').hide();
 
   });
 
@@ -30,6 +33,7 @@ $(document).ready(function() {
     $('#up').hide();
     $('.page-media').show();
     $('#nav-cover-top').removeClass('nav-cover-top');
+    $('#back').show();
   });
 
 
@@ -49,7 +53,6 @@ $(document).ready(function() {
 
     }
     else {
-
       document.getElementById("myFrame").height = "500";
       $('.chat-view').removeClass('ani-shrink-web');
       $('.nav-share-2').removeClass('ani-shrink');
