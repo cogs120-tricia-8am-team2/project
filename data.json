@@ -1,6 +1,6 @@
 {
   "categories": [
-    { "title": "Activites",
+    { "title": "Activities",
       "id": "activites"
     },
     { "title": "Food",
@@ -13,7 +13,7 @@
       "id": "reading"
     }],
   "allcategories": [
-    { "title": "Activites",
+    { "title": "Activities",
       "id": "activites"
     },
     {
