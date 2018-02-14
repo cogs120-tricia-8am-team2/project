@@ -16,16 +16,13 @@ exports.view = function(req, res){
   var newPageTitle = jsUcfirst(pageTitle);
 
   console.log("length: " + data.activityList.length);
-
-  currentItemIndex++;
+  if(currentItemIndex === 0){
+    console.log('reached the first of the list');
+    currentItemIndex = data.activityList.length;
+  }
+  currentItemIndex--;
+  data.currentUser.currentItemIndex = currentItemIndex;
   console.log("currentItemIndex: " + currentItemIndex);
-  if(currentItemIndex === data.activityList.length-1){
-    console.log('reached the end of the list');
-    data.currentUser.currentItemIndex = -1;
-  }
-  else {
-    data.currentUser.currentItemIndex = currentItemIndex;
-  }
 
   if(pageTitle === "Activites"){
 
