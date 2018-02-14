@@ -10,6 +10,7 @@ exports.view = function(req, res){
 
   var currentItemIndex = data.currentUser.currentItemIndex;
   var pageTitle = req.params.categoryTitle;
+  var isScreenShared = data.currentUser.isScreenShared;
 
 
   if(currentItemIndex === 0){
@@ -30,6 +31,7 @@ exports.view = function(req, res){
   	'pageTitle': pageTitle,
     'itemTitle' : itemTitle,
     'caption' : caption,
-    'itemURL' : itemURL
+    'itemURL' : itemURL,
+    'isScreenShared' : isScreenShared
   });
 };

@@ -16,6 +16,7 @@ var browse = require('./routes/browse');
 var right = require('./routes/right');
 var left = require('./routes/left');
 var share = require('./routes/share');
+var send = require('./routes/send');
 var preference = require('./routes/preference');
 var profile_popup = require('./routes/profile_popup');
 // Example route
@@ -49,11 +50,13 @@ app.get('/play/:categoryTitle/right', right.view);
 app.get('/play/:categoryTitle/left', left.view);
 app.get('/play/:categoryTitle/:itemId', play.view);
 app.get('/play/:categoryTitle/:itemId/share', share.view);
+app.get('/play/:categoryTitle/:itemId/share/send', send.view);
 app.get('/play/:categoryTitle/:itemId/info', info.view);
 app.get('/play/:categoryTitle/:itemId/info/:web', web.view);
 app.get('/browse', browse.view);
 app.get('/preference', preference.view);
 app.get('/profile_popup', profile_popup.view);
+
 
 
 // Example route

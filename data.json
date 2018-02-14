@@ -4,7 +4,8 @@
     "userName": null,
     "currentPageViewed": null,
     "currentCategorySelected": null,
-    "currentItemIndex": 0
+    "currentItemIndex": 0,
+    "isScreenShared" :true
   },
   "currentUsercategoryList": [],
   "allCategoryList":[],
