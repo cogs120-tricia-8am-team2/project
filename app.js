@@ -13,6 +13,7 @@ var play = require('./routes/play');
 var info = require('./routes/info');
 var web = require('./routes/web');
 var browse = require('./routes/browse');
+var right = require('./routes/right');
 var share = require('./routes/share');
 var preference = require('./routes/preference');
 var profile_popup = require('./routes/profile_popup');
@@ -43,6 +44,7 @@ if ('development' == app.get('env')) {
 
 app.get('/', index.view);
 app.get('/play/:categoryTitle', play.view);
+app.get('/play/:categoryTitle/right', right.view);
 app.get('/play/:categoryTitle/:itemId', play.view);
 app.get('/play/:categoryTitle/:itemId/share', share.view);
 app.get('/play/:categoryTitle/:itemId/info', info.view);
@@ -50,6 +52,7 @@ app.get('/play/:categoryTitle/:itemId/info/:web', web.view);
 app.get('/browse', browse.view);
 app.get('/preference', preference.view);
 app.get('/profile_popup', profile_popup.view);
+
 
 // Example route
 // app.get('/users', user.list);

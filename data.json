@@ -3,16 +3,31 @@
     "loginStatus": false,
     "userName": null,
     "currentPageViewed": null,
-    "currentCategorySelected": null
+    "currentCategorySelected": null,
+    "currentItemIndex": 0
   },
   "currentUsercategoryList": [],
   "allCategoryList":[],
-  "activityList:":[
+  "activityList":[
     {
       "itemTitle":"Surf",
-      "caption":"Beaches, Jacksonville Beach, United States",
-      "URL":"/images/play/activites/1.jpeg"
+      "caption":"Jacksonville Beach",
+      "URL":"/images/play/activities/1.jpeg"
+
+    },
+    {
+      "itemTitle":"Shane Dorian",
+      "caption":"An Unmakeable wave for most",
+      "URL":"/images/play/activities/2.jpeg"
+
+    },
+    {
+      "itemTitle":"Shane Dorian",
+      "caption":"An Unmakeable wave for most",
+      "URL":"/images/play/activities/3.jpeg"
+
     }
+
   ],
   "categories": [{
       "all": [{

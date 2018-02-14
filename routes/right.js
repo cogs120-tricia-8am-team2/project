@@ -15,8 +15,19 @@ exports.view = function(req, res){
   var pageTitle = req.params.categoryTitle;
   var newPageTitle = jsUcfirst(pageTitle);
 
+  console.log("length: " + data.activityList.length);
 
-  if(pageTitle === "activites"){
+  currentItemIndex++;
+  console.log("currentItemIndex: " + currentItemIndex);
+  if(currentItemIndex === data.activityList.length-1){
+    console.log('reached the end of the list');
+    data.currentUser.currentItemIndex = -1;
+  }
+  else {
+    data.currentUser.currentItemIndex = currentItemIndex;
+  }
+
+  if(pageTitle === "Activites"){
 
     console.log('activites is chosen');
     console.log('current Index: '+ currentItemIndex);
@@ -26,6 +37,7 @@ exports.view = function(req, res){
     var itemURL = itemObj.URL;
     console.log(itemURL);
   }
+  console.log('herer');
   res.render('play', {
   	'pageTitle': newPageTitle,
     'itemTitle' : itemTitle,
