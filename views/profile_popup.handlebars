@@ -20,6 +20,7 @@
                     <!-- Login form -->
                     <div class="tab-pane active" id="Login">
                         <form role="form" class="form-horizontal">
+                           
                             <div class="form-group">
                                 <label for="email" class="col-sm-2 control-label">
                                     Email</label>
@@ -40,12 +41,16 @@
                             <div class="row">
                                 <div class="col-sm-2"> </div>
                                 <div class="col-sm-10">
-                                <a href="/preference">
-                                    <button type="submit" class="btn btn-primary btn-sm"> Submit </button>
-                                </a>
+                    
+                                    <!-- Submit button -->
+                                    <input type="button" class="btn btn-primary btn-sm" value="Submit" onclick="window.location.href='/preference'" />
+                                    
+                                    <!-- Forgot password -->
                                     <a href="">Forgot password?</a>
+
                                 </div>
                             </div>
+
                         </form>
                     </div>
 
@@ -95,6 +100,7 @@
 
                                 </div>
                             </div>
+
                         </form>
                     </div>
 
@@ -105,6 +111,3 @@
         </div>
     </div>
 </div>
-
-<script src="/js/preference.js"></script>
-

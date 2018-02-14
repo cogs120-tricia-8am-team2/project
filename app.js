@@ -14,6 +14,8 @@ var info = require('./routes/info');
 var web = require('./routes/web');
 var browse = require('./routes/browse');
 var share = require('./routes/share');
+var preference = require('./routes/preference');
+var profile_popup = require('./routes/profile_popup');
 // Example route
 // var user = require('./routes/user');
 
@@ -46,6 +48,9 @@ app.get('/play/:categoryTitle/:itemId/share', share.view);
 app.get('/play/:categoryTitle/:itemId/info', info.view);
 app.get('/play/:categoryTitle/:itemId/info/:web', web.view);
 app.get('/browse', browse.view);
+app.get('/preference', preference.view);
+app.get('/profile_popup', profile_popup.view);
+
 // Example route
 // app.get('/users', user.list);
 
