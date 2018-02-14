@@ -28,19 +28,21 @@
 			</div>
 			<div class="categories-button">
 
-				{{#each allcategories}}
-					<a href="/play/{{title}}">
+					{{#each allCategoriesList}}
+					{{#each this}}
+						<a href="/play/{{id}}">
 
-						<div id="{{id}}" class="categories">
-							{{title}}
-						</div>
+							<div id="{{id}}" class="categories">
+								{{title}}
+							</div>
 
-					</a>
-				{{/each}}
-			</div>
+						</a>
+					{{/each}}
+					{{/each}}
+				</div>
 
 		</div>
-    	
+
     	<div class="nav-cover">
    		 </div>
 
@@ -107,7 +109,7 @@
 
 	<script src="/js/jquery-1.11.0.js"></script>
 	<script src="/js/bootstrap.js"></script>
-	
+
 
 </body>
 

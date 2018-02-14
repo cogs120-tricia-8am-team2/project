@@ -30,27 +30,29 @@
 		<div class="categories-container">
 			<div class="content-container">
 				<div class="content-Title">
-					Popular Categories
+					{{currentUser.currentCategorySelected}} Categories
 				</div>
 				<div class="content-More">
 					<a href="/browse">More &gt;</a>
 				</div>
 			</div>
 			<div class="categories-button">
-				<a href="/play/Random">
+				<a href="/play/random">
 					<div class="categories">
 						Random <img src="/images/icons/random-100.png" alt="random play icon" height="70">
 					</div>
 				</a>
 
-				{{#each categories}}
-					<a href="/play/{{title}}">
+				{{#each currentUsercategoryList}}
+					{{#each this}}
+					<a href="/play/{{id}}">
 
 						<div id="{{id}}" class="categories">
 							{{title}}
 						</div>
 
 					</a>
+					{{/each}}
 				{{/each}}
 			</div>
 
