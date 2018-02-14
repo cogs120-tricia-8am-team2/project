@@ -1,33 +1,31 @@
 var data = require('../data.json');
 
 
-//function : it makes a first char in a string capital
-//for Category title
-function jsUcfirst(string)
-{
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-
 exports.view = function(req, res){
 
   var currentItemIndex = data.currentUser.currentItemIndex;
   var pageTitle = req.params.categoryTitle;
-  var newPageTitle = jsUcfirst(pageTitle);
+  var length = data.activityList.length;
 
-  console.log("length: " + data.activityList.length);
-
+  //console.log("list of length: " + data.activityList.length);
+  //console.log("currentItemIndex: " + currentItemIndex);
+  //console.log("after incresing currentItemIndex");
   currentItemIndex++;
-  console.log("currentItemIndex: " + currentItemIndex);
-  if(currentItemIndex === data.activityList.length-1){
+
+  if(currentItemIndex >= length){
     console.log('reached the end of the list');
-    data.currentUser.currentItemIndex = -1;
+    data.currentUser.currentItemIndex = 0;
+    currentItemIndex = 0;
   }
   else {
     data.currentUser.currentItemIndex = currentItemIndex;
   }
 
-  if(pageTitle === "Activites"){
+
+
+  console.log("currentItemIndex: " + currentItemIndex);
+
+  if(pageTitle === "activities" || "Activities"){
 
     console.log('activites is chosen');
     console.log('current Index: '+ currentItemIndex);
@@ -39,7 +37,7 @@ exports.view = function(req, res){
   }
 
   res.render('play', {
-  	'pageTitle': newPageTitle,
+  	'pageTitle': pageTitle,
     'itemTitle' : itemTitle,
     'caption' : caption,
     'itemURL' : itemURL

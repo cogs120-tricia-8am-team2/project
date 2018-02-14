@@ -32,7 +32,7 @@
   "categories": [{
       "all": [{
           "title": "Activities",
-          "id": "activites"
+          "id": "activities"
         },
         {
           "title": "Art",
@@ -96,7 +96,7 @@
     {
       "popular": [{
           "title": "Activities",
-          "id": "activites"
+          "id": "activities"
         },
         {
           "title": "Games",
@@ -115,7 +115,7 @@
     {
       "favorite": [{
           "title": "Activities",
-          "id": "activites"
+          "id": "activities"
         },
         {
           "title": "Games",

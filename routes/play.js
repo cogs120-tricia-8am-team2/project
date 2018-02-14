@@ -3,20 +3,20 @@ var data = require('../data.json');
 
 //function : it makes a first char in a string capital
 //for Category title
-function jsUcfirst(string)
-{
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
+
 
 
 exports.view = function(req, res){
 
   var currentItemIndex = data.currentUser.currentItemIndex;
   var pageTitle = req.params.categoryTitle;
-  var newPageTitle = jsUcfirst(pageTitle);
 
 
-  if(pageTitle === "activites"){
+  if(currentItemIndex === 0){
+    console.log('first page');
+  }
+
+  if(pageTitle === "activities"){
 
     console.log('activites is chosen');
     console.log('current Index: '+ currentItemIndex);
@@ -27,7 +27,7 @@ exports.view = function(req, res){
     console.log(itemURL);
   }
   res.render('play', {
-  	'pageTitle': newPageTitle,
+  	'pageTitle': pageTitle,
     'itemTitle' : itemTitle,
     'caption' : caption,
     'itemURL' : itemURL
