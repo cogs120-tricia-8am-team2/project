@@ -2,7 +2,7 @@
 var data = require('../data.json');
 var allCategories = data.categories[0]['all'];
 data.currentUser.currentPageViewed = "Browse";
-data.allCategoriesList.push(allCategories);
+data.allCategoryList.push(allCategories);
 
 
 exports.view = function(req, res){

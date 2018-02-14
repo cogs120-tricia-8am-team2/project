@@ -25,7 +25,7 @@ else {
 }
 
 //update current user's location
-if(currentPageViewed === "None"){
+if(currentPageViewed === null){
 	data.currentUser.currentPageViewed = "Home";
 }
 
