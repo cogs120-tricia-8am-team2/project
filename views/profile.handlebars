@@ -1,26 +1,115 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
-    <title>Profile</title>
-  	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <title>APP</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link href="/css/bootstrap.min.css" rel="stylesheet">
-	<link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection"/>
-	<link href="/css/index.css" rel="stylesheet">
-	<link href="/css/profile.css" rel="stylesheet">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection"/>
+  <link href="/css/profile_page.css" rel="stylesheet">
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <h1> profile page </h1>
+  <div class="page-container">
+    <div class="heading-container">
+      <div class= "profile_pic">
+        <img src="/images/icons/default_profile.jpg" alt="profile picture" style="width:100px;height:100px;">
+      </div>
+      <div class = "username",>
+        <p>Username</p>
+      </div>
+      <div class = "description">
+        "this is a description"
+      </div>
+    </div>
+    <div class = "tabs_container">
+      <ul class="nav nav-tabs">
+                <li class="active"><a href="#Saved" data-toggle="tab">Saved</a></li>
+                <li><a href="#Uploaded" data-toggle="tab">Uploaded</a></li>
+                <li><a href="#Shared" data-toggle="tab">Shared</a></li>
+            </ul>
+        </div>
+        <div class="saved-tab active" id="Saved">
+          <!-- data for saved media -->
+        </div>
+        <div class="uploaded-tab active" id="Uploaded">
+          <!-- data for uploaded media -->
+        </div>
+        <div class = "shared-tab active" id="Shared">
+          <!-- data for shared media -->
+        </div>
 
 
-    <script src="/js/jquery-1.11.0.js"></script>
-    <script src="/js/bootstrap.js"></script>
-    <script src="/js/index.js"></script>
-  </body>
+
+
+
+    <!-- SPACE FOR POPUP -->
+    <div id="profile_popup" class="modal"> </div>
+
+
+    <!-- BOTTOM NAVIGATION BAR -->
+    <div class="nav-container">
+
+      <!-- Home -->
+      <a href="/">
+        <div class="home nav-divider">
+          <div class="nav-images">
+            <img src="/images/icons/home-100.png" alt="home button">
+          </div>
+          <div class="nav-title">
+            Home
+          </div>
+        </div>
+      </a>
+
+      <!-- Browse -->
+      <a href="/browse">
+        <div class="browse nav-divider">
+          <div class="nav-images">
+            <img src="/images/icons/browse-100.png" alt="browse button">
+          </div>
+          <div class="nav-title">
+            Browse
+          </div>
+        </div>
+      </a>
+
+      <!-- Profile -->
+        <a class="profile" href="/profile" >    
+          <div class="profile nav-divider">
+          <div class="nav-images">
+            <img src="/images/icons/profile-100.png" alt="profile button">
+          </div>
+          <div class="nav-title">
+            Profile
+          </div>
+        </div>
+      </a>
+
+      <!-- Search -->
+      <a href="/">
+        <div class="search">
+          <div class="nav-images">
+            <img src="/images/icons/search-100.png" alt="search button">
+          </div>
+          <div class="nav-title">
+            Search
+          </div>
+        </div>
+      </a>
+    </div>
+
+
+
+  </div>
+
+  <script src="/js/jquery-1.11.0.js"></script>
+  <script src="/js/bootstrap.js"></script>
+  <script src="/js/profile.js"></script>
+</body>
 
 </html>

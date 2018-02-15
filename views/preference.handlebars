@@ -21,8 +21,9 @@
         		<div class="page-back">
           			<a href="/"> &lt; Back  </a>
         		</div>
+
         	    <a href="/">
-				<div class="preference-confirm" align="center">
+				<div class="preference-confirm" align="right">
 						Confirm
 				</div>
 				</a>
@@ -34,6 +35,7 @@
 					<p align="right">skip this step</p>
 				</div>
 				</a>
+			    
 			    <div class="preference-Search">
 				    <div class="search-50" align="right">
 						<img src="/images/icons/search-50.png" alt="search button"><span> Search</span>
@@ -41,7 +43,7 @@
 				</div>
 
 			</div>
-			<div class="categories-button">
+		    <div class="categories-button">
 
 				{{#each allcategories}}
 				        <form> 
@@ -58,14 +60,12 @@
 
     </div>
 
-    <!-- SPACE FOR POPUP -->
-		<div id="profile_popup" class="modal"> </div>
 
 
-		<!-- BOTTOM NAVIGATION BAR -->
+
+
 		<div class="nav-container">
 
-			<!-- Home -->
 			<a href="/">
 				<div class="home nav-divider">
 					<div class="nav-images">
@@ -77,7 +77,6 @@
 				</div>
 			</a>
 
-			<!-- Browse -->
 			<a href="/browse">
 				<div class="browse nav-divider">
 					<div class="nav-images">
@@ -88,20 +87,17 @@
 					</div>
 				</div>
 			</a>
-
-			<!-- Profile -->
-		    <a class="profile" onclick="checkLoginStatus( {{currentUser.loginStatus}} )" >		
-		    	<div class="profile nav-divider">
+			<a href="/">
+				<div class="profile nav-divider">
 					<div class="nav-images">
 						<img src="/images/icons/profile-100.png" alt="profile button">
 					</div>
 					<div class="nav-title">
 						Profile
 					</div>
+
 				</div>
 			</a>
-
-			<!-- Search -->
 			<a href="/">
 				<div class="search">
 					<div class="nav-images">
@@ -113,15 +109,10 @@
 				</div>
 			</a>
 		</div>
-
-
-
-
 	</div>
 
 	<script src="/js/jquery-1.11.0.js"></script>
 	<script src="/js/bootstrap.js"></script>
-	<script src="/js/profile.js"></script>
 
 </body>
 
