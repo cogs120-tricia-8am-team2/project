@@ -1,6 +1,6 @@
 {
   "currentUser": {
-    "loginStatus": false,
+    "loginStatus": true,
     "userName": null,
     "currentPageViewed": null,
     "currentCategorySelected": null,

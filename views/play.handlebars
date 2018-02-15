@@ -61,10 +61,9 @@
 
     </div>
 
-
     <!-- SPACE FOR POPUP -->
-    <div id="profile_popup" class="modal">
-      </div>
+    <div id="profile_popup" class="modal"> </div>
+
 
     <div class="nav-share-2 chatroom-btns-layout">
         <div id="exitChatroom" class="chatroom-btns displayNone">
@@ -74,27 +73,25 @@
           UP
         </div>
       </div>
-{{#if isScreenShared}}
-    <div class="nav-share chatroom-btns-layout">
-      <div id="exitSharing" class="chatroom-btns">
-        Exit Sharing
-      </div>
-      <div id="enterChatroom" class="chatroom-btns chatroom-btns-last">
-        Enter Chatroom
-      </div>
-    </div>
-{{/if}}
+      {{#if isScreenShared}}
+          <div class="nav-share chatroom-btns-layout">
+            <div id="exitSharing" class="chatroom-btns">
+              Exit Sharing
+            </div>
+            <div id="enterChatroom" class="chatroom-btns chatroom-btns-last">
+              Enter Chatroom
+            </div>
+          </div>
+      {{/if}}
 
     </div>
     <!-- BOTTOM NAVIGATION BAR -->
 
     <div class="chat-view displayNone">
-
       <iframe id="myFrame" src="https://chat-seo.herokuapp.com" width="100%" height="auto"></iframe>
-
-
     </div>
 
+    <!-- BOTTOM NAVIGATION BAR -->
     <div class="nav-container">
 
       <!-- Home -->
@@ -122,18 +119,16 @@
       </a>
 
       <!-- Profile -->
-      <a href="/profile_popup" data-toggle="modal" data-target="#profile_popup">
-        <div class="profile nav-divider">
+        <a class="profile" onclick="checkLoginStatus( {{currentUser.loginStatus}} )" >    
+          <div class="profile nav-divider">
           <div class="nav-images">
             <img src="/images/icons/profile-100.png" alt="profile button">
           </div>
           <div class="nav-title">
             Profile
           </div>
-
         </div>
       </a>
-
 
       <!-- Search -->
       <a href="/">
@@ -156,6 +151,7 @@
   <script src="/js/jquery-1.11.0.js"></script>
   <script src="/js/bootstrap.js"></script>
   <script src="/js/play.js"></script>
+  <script src="/js/profile.js"></script>
 </body>
 
 </html>
