@@ -19,7 +19,7 @@ var share = require('./routes/share');
 var send = require('./routes/send');
 var preference = require('./routes/preference');
 var profile = require('./routes/profile');
-// Example route
+
 // var user = require('./routes/user');
 
 var app = express();
