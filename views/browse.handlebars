@@ -43,14 +43,10 @@
 
 		</div>
 
-    	<div class="nav-cover">
-   		 </div>
+    	<div class="nav-cover"></div>
 
-
-
-		<!-- SPACE FOR POPUP -->
-		<div id="profile_popup" class="modal">
-	  	</div>
+    	<!-- SPACE FOR POPUP -->
+		<div id="profile_popup" class="modal"> </div>
 
 
 		<!-- BOTTOM NAVIGATION BAR -->
@@ -81,15 +77,14 @@
 			</a>
 
 			<!-- Profile -->
-			<a href="/profile_popup" data-toggle="modal" data-target="#profile_popup">
-				<div class="profile nav-divider">
+		    <a class="profile" onclick="checkLoginStatus( {{currentUser.loginStatus}} )" >		
+		    	<div class="profile nav-divider">
 					<div class="nav-images">
 						<img src="/images/icons/profile-100.png" alt="profile button">
 					</div>
 					<div class="nav-title">
 						Profile
 					</div>
-
 				</div>
 			</a>
 
@@ -105,10 +100,15 @@
 				</div>
 			</a>
 		</div>
+
+
+
+		
 	</div>
 
 	<script src="/js/jquery-1.11.0.js"></script>
 	<script src="/js/bootstrap.js"></script>
+	<script src="/js/profile.js"></script>
 
 
 </body>
