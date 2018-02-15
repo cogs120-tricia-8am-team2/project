@@ -32,7 +32,7 @@ a {
 }
 
 .page-title{
-  font-size: 2rem;
+  font-size: 1.3rem;
   grid-area: Title;
   display: flex;
   flex-direction: row;
