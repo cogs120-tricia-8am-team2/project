@@ -46,11 +46,16 @@
 .page-back{
   margin: 10px;
 }
+
+
+}
+
 .preference-confirm {
-  margin-top: 30px;
-  top: 0px;
-  right: 0px;
-  left: max-content;
+  display: grid;
+  grid-template-columns: 1fr, 1fr, 1fr;
+  grid-column-gap: 1em;
+  }
+.preference-confirm > div{   
   font-size: 2rem;
   color: white;
   border-style: solid;

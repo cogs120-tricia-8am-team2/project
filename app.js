@@ -19,7 +19,7 @@ var share = require('./routes/share');
 var send = require('./routes/send');
 var preference = require('./routes/preference');
 var profile_popup = require('./routes/profile_popup');
-// Example route
+var profile = require('./routes/profile');
 // var user = require('./routes/user');
 
 var app = express();
@@ -56,6 +56,8 @@ app.get('/play/:categoryTitle/:itemId/info/:web', web.view);
 app.get('/browse', browse.view);
 app.get('/preference', preference.view);
 app.get('/profile_popup', profile_popup.view);
+app.get('/profile', profile.view);
+
 
 
 

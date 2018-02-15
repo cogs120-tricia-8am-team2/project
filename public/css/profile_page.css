@@ -1,0 +1,50 @@
+.nav-container {
+  background-color: #DFDFDF;
+  position: fixed;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "Home Brower Profile Search";
+  bottom: 0;
+  text-align: center;
+}
+
+.nav-images{
+  padding-top: 1rem;
+}
+
+.nav-images img {
+  width:2rem;
+}
+
+.nav-title {
+  font-size: 1rem;
+}
+
+.nav-divider{
+  border-right: 1px solid #efefef;
+
+}
+
+.heading-container{
+  display:grid;
+  grid-template-columns: 1fr, 2fr, 1fr;
+ }
+
+.profile_pic{
+  grid-column: 1;
+  margin-top: 15px;
+  margin-left: 15px;
+ 
+}
+.username{
+  grid-column: 1;
+  margin-left: 18px;
+ 
+}
+.description{
+  grid-column:1;
+  margin-left: 18px;
+  margin-bottom: 20px;
+ }
