@@ -29,7 +29,8 @@
 
 .heading-container{
   display:grid;
-  grid-template-columns: 1fr, 2fr, 1fr;
+  grid-template-columns: 1fr, 1fr, 1fr;
+  grid-column-gap: 1em;
  }
 
 .profile_pic{
@@ -41,13 +42,20 @@
 .username{
   grid-column: 1;
   margin-left: 18px;
- 
+  font-size: larger;
 }
 .description{
-  grid-column:1;
-  margin-left: 18px;
-  margin-bottom: 20px;
+  grid-column: 2;
+  margin-top: 20px;
+  font-size: medium;
  }
+ .edit-profile{
+   grid-column: 2;
+   text-align:right;
+   margin-right: 20px;
+   
+ }
+
 
 /* pop up css; combined into one file */
 input::-webkit-input-placeholder {
