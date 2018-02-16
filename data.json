@@ -1,6 +1,6 @@
 {
   "currentUser": {
-    "loginStatus": true,
+    "loginStatus": false,
     "userName": null,
     "currentPageViewed": null,
     "currentCategorySelected": null,
@@ -133,6 +133,14 @@
       ]
     }
 
+
+  ],
+  "userList":[
+    {
+      "name":"default_name",
+      "email":"default_email@ucsd.edu",
+      "password":"default_password"
+    }
 
   ]
 

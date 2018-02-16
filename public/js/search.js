@@ -14,7 +14,6 @@ function myFunction() {
         }
     }
 }
-
 function show_overlay()
 {
   $('#search-icon-top').hide();
@@ -26,3 +25,4 @@ function hide_overlay()
   $('#search-overlay').fadeOut();
   $('#search-icon-top').show();
 }
+

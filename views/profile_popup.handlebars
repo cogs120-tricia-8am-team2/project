@@ -57,52 +57,26 @@
 
                     <!-- Registration form -->
                     <div class="tab-pane" id="Registration">
-                        <form role="form" class="form-horizontal">
-                            
-                            <!-- Name -->
+                        <form id="addFriendForm" role="form" method="get" action="/profile_register">
                             <div class="form-group">
-                                <label for="email" class="col-sm-2 control-label">
-                                    Name</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" placeholder="Name" />
-                                </div>
+                              <label for="name">Name:</label>
+                              <input type="text" class="form-control" id="name" placeholder="Name" name="name">
                             </div>
 
-                            <!-- Email -->
                             <div class="form-group">
-                                <label for="email" class="col-sm-2 control-label">
-                                    Email</label>
-                                <div class="col-sm-10">
-                                    <input type="email" class="form-control" id="email" placeholder="Email" />
-                                </div>
+                              <label for="email">Email:</label>
+                              <input type="email" class="form-control" id="email" placeholder="Email" name="email">
                             </div>
-                            
-                            <!-- Password -->
+
                             <div class="form-group">
-                                <label for="password" class="col-sm-2 control-label">
-                                    Password</label>
-                                <div class="col-sm-10">
-                                    <input type="password" class="form-control" id="password" placeholder="Password" />
-                                </div>
+                              <label for="password">Password:</label>
+                              <input type="password" class="form-control" id="password" placeholder="Password" name="password">
                             </div>
 
-                            <!-- Buttons -->
-                            <div class="row">
-                                <div class="col-sm-2">
-                                </div>
-                                <div class="col-sm-10">
-                                    <button type="button" class="btn btn-primary btn-sm"> 
-                                        Save & Continue
-                                    </button>
-                                    
-                                    <button type="button" class="btn btn-default btn-sm">
-                                        Cancel
-                                    </button>
-
-                                </div>
-                            </div>
-
+                            <input type="submit" id="submitBtn" class="btn btn-default" value="Save & Continue"></input>
                         </form>
+
+
                     </div>
 
                 </div>

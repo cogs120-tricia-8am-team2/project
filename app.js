@@ -58,6 +58,7 @@ app.get('/browse', browse.view);
 app.get('/preference', preference.view);
 app.get('/profile', profile.view);
 app.get('/search', search.view);
+app.get('/profile_register', profile.register);
 
 
 // Example route

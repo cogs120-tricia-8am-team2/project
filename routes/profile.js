@@ -13,3 +13,19 @@ exports.view = function(req, res){
     }
 
 };
+
+exports.register = function(req, res) {
+	console.log("register");
+	var newUser = 
+	{
+      "name": req.query.name,
+      "email": req.query.email,
+      "password": req.query.password
+	};
+	data.userList.push(newUser);
+	console.log(data.userList);
+	data.currentUser.loginStatus = true;
+	data.currentUser.userName = req.query.name;
+	res.render('profile', data);
+
+};
