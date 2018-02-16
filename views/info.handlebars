@@ -20,21 +20,27 @@
       </div>
 
       <div class="page-title">
-        {{itemId}}
+        info
       </div>
 
       <div class="page-filter">
+        Save
       </div>
 
     </div>
-
     <div id="desc" class="page-subtitle">
+      Title
+    </div>
+    <div class="page-box page-box-padding">
+      {{itemId}}
+    </div>
+
+    <div class="page-subtitle">
       Description
     </div>
 
     <div class="page-box page-box-padding">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      {{description}}
     </div>
 
     <div class="page-subtitle">
@@ -175,7 +181,7 @@
       </a>
 
       <!-- Profile -->
-        <a class="profile" onclick="checkLoginStatus( {{currentUser.loginStatus}} )" >    
+        <a class="profile" onclick="checkLoginStatus( {{currentUser.loginStatus}} )" >
           <div class="profile nav-divider">
           <div class="nav-images">
             <img src="/images/icons/profile-100.png" alt="profile button">
@@ -199,7 +205,7 @@
       </a>
     </div>
 
-    
+
 
   </div>
 
@@ -209,7 +215,7 @@
   <script src="/js/jquery-1.11.0.js"></script>
   <script src="/js/bootstrap.js"></script>
   <script src="/js/profile.js"></script>
-  
+
 </body>
 
 </html>

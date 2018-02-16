@@ -29,6 +29,7 @@ a {
   background-color: #DFDFDF;
   position:fixed;
   width: 100%;
+  height: 4.5rem;
 }
 
 .page-title{
@@ -41,9 +42,10 @@ a {
 }
 
 .page-back, .page-filter{
-  margin: 1rem;
+  margin: 0 1rem;
   font-size: 1.1rem;
   color: red;
+  margin-top: 1.4rem;
 }
 
 .page-filter{

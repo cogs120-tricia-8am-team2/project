@@ -22,8 +22,14 @@
 				<div class="content-Title">
 					All Categories
 				</div>
-				<div class="content-More">
-					Edit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sort &nbsp;
+				<div id="con-more">
+					<div class="content-More more">
+						Edit
+					</div>
+					<div class="content-More more">
+						Sort
+					</div>
+
 				</div>
 			</div>
 			<div class="categories-button">
@@ -77,7 +83,7 @@
 			</a>
 
 			<!-- Profile -->
-		    <a class="profile" onclick="checkLoginStatus( {{currentUser.loginStatus}} )" >		
+		    <a class="profile" onclick="checkLoginStatus( {{currentUser.loginStatus}} )" >
 		    	<div class="profile nav-divider">
 					<div class="nav-images">
 						<img src="/images/icons/profile-100.png" alt="profile button">
@@ -103,7 +109,7 @@
 
 
 
-		
+
 	</div>
 
 	<script src="/js/jquery-1.11.0.js"></script>
