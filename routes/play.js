@@ -11,6 +11,8 @@ exports.view = function(req, res){
   var currentItemIndex = data.currentUser.currentItemIndex;
   var pageTitle = req.params.categoryTitle;
   var isScreenShared = data.currentUser.isScreenShared;
+  var currentCategorySelected = data.currentUser.currentCategorySelected;
+  var allCategoryList = data.allCategoryList;
 
 
   if(currentItemIndex === 0){
@@ -27,11 +29,14 @@ exports.view = function(req, res){
     var itemURL = itemObj.URL;
     console.log(itemURL);
   }
+
   res.render('play', {
   	'pageTitle': pageTitle,
     'itemTitle' : itemTitle,
     'caption' : caption,
     'itemURL' : itemURL,
-    'isScreenShared' : isScreenShared
+    'isScreenShared' : isScreenShared,
+    'allCategoryList' : allCategoryList,
+    'currentCategorySelected' : currentCategorySelected
   });
 };

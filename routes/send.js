@@ -8,10 +8,15 @@ exports.view = function(req, res){
   console.log("inside of send.js file");
   console.log(data.currentUser.isScreenShared);
   console.log(categoryTitle);
-  console.log(itemId);
+  console.log(itemId);  
+  var currentCategorySelected = data.currentUser.currentCategorySelected;
+  var allCategoryList = data.allCategoryList;
+
   data.currentUser.isScreenShared = true;
 	res.render('share', {
     'categoryTitle':categoryTitle,
-    'itemId':itemId
+    'itemId':itemId,
+    'allCategoryList' : allCategoryList,
+    'currentCategorySelected' : currentCategorySelected
   });
 };

@@ -35,11 +35,14 @@ exports.view = function(req, res){
     var itemURL = itemObj.URL;
     console.log(itemURL);
   }
-
+    var currentCategorySelected = data.currentUser.currentCategorySelected;
+    var allCategoryList = data.allCategoryList;
   res.render('play', {
   	'pageTitle': pageTitle,
     'itemTitle' : itemTitle,
     'caption' : caption,
-    'itemURL' : itemURL
+    'itemURL' : itemURL,
+    'allCategoryList' : allCategoryList,
+    'currentCategorySelected' : currentCategorySelected
   });
 };

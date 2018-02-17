@@ -1,9 +1,27 @@
+
+document.getElementById("allCategoryUL").style.display = "none";
+document.getElementById("popularCategoryUL").style.display = "";
+
+
 function myFunction() {
+
+
     var input, filter, ul, li, a, i;
     input = document.getElementById("myInput");
+
+    if (input.value == '') { 
+      document.getElementById("allCategoryUL").style.display = "none";
+      document.getElementById("popularCategoryUL").style.display = "";
+    }
+    else {
+      document.getElementById("allCategoryUL").style.display = "";
+      document.getElementById("popularCategoryUL").style.display = "none";
+    }
+
     filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
+    ul = document.getElementById("allCategoryUL");
     li = ul.getElementsByTagName("li");
+
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
         if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
@@ -13,6 +31,7 @@ function myFunction() {
 
         }
     }
+
 }
 function show_overlay()
 {

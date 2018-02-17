@@ -7,12 +7,15 @@ exports.view = function(req, res){
   console.log(categoryTitle);
   console.log(itemId);
   console.log(req.params);
-
+  var currentCategorySelected = data.currentUser.currentCategorySelected;
+  var allCategoryList = data.allCategoryList;
 
 	res.render('web', {
     'categoryTitle': categoryTitle,
     'itemId' : itemId,
-    'web' : web
+    'web' : web,
+    'allCategoryList' : allCategoryList,
+    'currentCategorySelected' : currentCategorySelected
 
 
 

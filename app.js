@@ -19,7 +19,6 @@ var share = require('./routes/share');
 var send = require('./routes/send');
 var preference = require('./routes/preference');
 var profile = require('./routes/profile');
-var search = require('./routes/search');
 
 // var user = require('./routes/user');
 
@@ -57,7 +56,6 @@ app.get('/play/:categoryTitle/:itemId/info/:web', web.view);
 app.get('/browse', browse.view);
 app.get('/preference', preference.view);
 app.get('/profile', profile.view);
-app.get('/search', search.view);
 app.get('/profile_register', profile.register);
 
 
