@@ -9,17 +9,14 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
-var play = require('./routes/play');
-var info = require('./routes/info');
-var web = require('./routes/web');
-var browse = require('./routes/browse');
+var dataSelector = require('./routes/dataSelector');
 var right = require('./routes/right');
 var left = require('./routes/left');
+var info = require('./routes/info');
 var share = require('./routes/share');
-var send = require('./routes/send');
-var preference = require('./routes/preference');
-var profile = require('./routes/profile');
-
+var show = require('./routes/show');
+var external = require('./routes/external');
+// Example route
 // var user = require('./routes/user');
 
 var app = express();
@@ -45,18 +42,16 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', index.view);
-app.get('/play/:categoryTitle', play.view);
-app.get('/play/:categoryTitle/right', right.view);
-app.get('/play/:categoryTitle/left', left.view);
-app.get('/play/:categoryTitle/:itemId', play.view);
-app.get('/play/:categoryTitle/:itemId/share', share.view);
-app.get('/play/:categoryTitle/:itemId/share/send', send.view);
-app.get('/play/:categoryTitle/:itemId/info', info.view);
-app.get('/play/:categoryTitle/:itemId/info/:web', web.view);
-app.get('/browse', browse.view);
-app.get('/preference', preference.view);
-app.get('/profile', profile.view);
-app.get('/profile_register', profile.register);
+app.get('/itemID/share')
+app.get('/sharedlink/:itemId/show', share.linkview);
+app.get('/sharedlink/:itemId/show/info', share.infoview);
+app.get('/:categoryTitle', dataSelector.view);
+app.get('/:categoryTitle/right', right.view);
+app.get('/:categoryTitle/left', left.view);
+app.get('/:categoryTitle/:itemId/info', info.view);
+app.get('/:categoryTitle/:itemId/share', share.view);
+app.get('/:categoryTitle/:itemId/show', show.view);
+app.get('/:categoryTitle/:itemId/info/:externalId/external', external.view);
 
 
 // Example route

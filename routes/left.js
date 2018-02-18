@@ -1,40 +1,61 @@
-var data = require('../data.json');
+var userData = require('../userData.json');
 
 
 
 
-exports.view = function(req, res){
 
-  var currentItemIndex = data.currentUser.currentItemIndex;
-  var pageTitle = req.params.categoryTitle;
+exports.view = function(req, res) {
 
-  console.log("length: " + data.activityList.length);
-  if(currentItemIndex === 0){
-    console.log('reached the first of the list');
-    currentItemIndex = data.activityList.length;
+  var catagoryTitle = req.params.categoryTitle;
+  var itemIndex = userData.currentItemIndex;
+  var length = userData.categoryList.length;
+  var mediaHTML ='';
+
+  console.log('catagoryTitle: ' + catagoryTitle);
+  console.log('itemIndex: ' + itemIndex);
+  console.log('length' + length);
+
+  if(itemIndex ===0){
+    itemIndex = length;
   }
-  currentItemIndex--;
-  data.currentUser.currentItemIndex = currentItemIndex;
-  console.log("currentItemIndex: " + currentItemIndex);
+  itemIndex--;
+  userData.currentItemIndex = itemIndex;
 
-  if(pageTitle === "activities" || "Activities"){
 
-    console.log('activites is chosen');
-    console.log('current Index: '+ currentItemIndex);
-    var itemObj = data.activityList[currentItemIndex];
-    var itemTitle = itemObj.itemTitle;
-    var caption = itemObj.caption;
-    var itemURL = itemObj.URL;
-    console.log(itemURL);
+  console.log("currentItemIndex: " + itemIndex);
+
+  var itemObj = userData.categoryList[itemIndex];
+  var itemTitle = itemObj.itemTitle;
+  var caption = itemObj.caption;
+  var itemURL = itemObj.URL;
+  var itemType = itemObj.type;
+  var itemID = itemObj.id;
+  console.log(itemType);
+  console.log(itemURL);
+  console.log('catagoryTitle: ' + catagoryTitle);
+  switch (itemType) {
+    case 'image':
+      console.log('image Type');
+      mediaHTML = '<img id="media" src="' + itemURL + '" alt="">';
+      break;
+
+    case 'video':
+      console.log('video Type');
+      mediaHTML = '<video style="width:100%;" controls><source src='+ itemURL+' type=video/mp4></video>';
+      break;
+
+    default:
+      console.log('check mediaType!');
+      break;
   }
-   var currentCategorySelected = data.currentUser.currentCategorySelected;
-   var allCategoryList = data.allCategoryList;
+
+  console.log('Last catagoryTitle: ' + catagoryTitle);
   res.render('play', {
-  	'pageTitle': pageTitle,
+    'pageTitle': catagoryTitle,
+    'type': mediaHTML,
     'itemTitle' : itemTitle,
-    'caption' : caption,
-    'allCategoryList' : allCategoryList,
-    'currentCategorySelected' : currentCategorySelected, 
-    'itemURL' : itemURL
+    'caption': caption,
+    'itemID': itemID
   });
+
 };
