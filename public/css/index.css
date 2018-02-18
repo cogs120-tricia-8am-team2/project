@@ -9,6 +9,7 @@ html, body{
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 .page-container {
@@ -118,6 +119,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0.5rem 0;
 }
 
 .recently-button{
@@ -176,4 +178,13 @@ a {
 
 .nav-cover{
   margin-bottom: 5rem;
+}
+
+.footer{
+  margin-top: 1.5rem;
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }

@@ -1,34 +1,54 @@
+//database
+var userData = require('../userData.json');
+var popularCategoryList = require('../popularCategoryListData.json');
+
 //variables
-var data = require('../data.json');
-var loginStatus = data.currentUser.loginStatus;
-var currentPageViewed = data.currentUser.currentPageViewed;
+var loginStatus = userData.loginStatus;
 
-//check current User status
 
-//for new user
-//shows Popular Categories
-if (loginStatus === false){
-	console.log('New User is incoming');
+//set current page = home
+userData.currentPageViewed ="home";
 
-		var popular = data.categories[1]['popular'];
-		data.currentUsercategoryList.push(popular);
-		data.currentUser.currentCategorySelected ="Popular";
 
+
+
+//check a user is logged in or not
+if (loginStatus) {
+  //a returning user
+  console.log('you are logged in already');
+  //favorite categotyList should be shown
+  var favoriteList = userData.favoriteList;
+  console.log(favoriteList);
+  //update currentCategorySelected to print "Favorite" text
+  userData.currentCategorySelected = "Favorite";
+  // copy 4 most favorite categories
+  // from favoriteList to userList in userData.json
+  for (var i = 0; i < 4; i++) {
+    userData.userList.push(favoriteList[i]);
+  }
 }
-//shows Favorite Categories
 else {
-	console.log('Returning User is incoming');
+  //a new user
+  console.log('you are not logged in yet');
+  //popular categoryList should be shown
 
-		var favorite = data.categories[2]['favorite'];
-		data.currentUsercategoryList.push(favorite);
-		data.currentUser.currentCategorySelected ="Favorite";
-}
+  //update currentCategorySelected to print "Popular" text
+  userData.currentCategorySelected = "Popular";
 
-//update current user's location
-if(currentPageViewed === null){
-	data.currentUser.currentPageViewed = "Home";
+  // copy 4 most popular categories
+  // from popularCategoryList to userList in userData.json
+  for (var i = 0; i < 4; i++) {
+    userData.userList.push(popularCategoryList[i]);
+  }
+
 }
+var userList = userData.userList;
+
 
 exports.view = function(req, res){
-	res.render('index', data);
+  userData.currentItemIndex = 0;
+  res.render('index', {
+    'currentCategorySelected': userData.currentCategorySelected,
+    'currentUserCategoryList': userList
+  });
 };

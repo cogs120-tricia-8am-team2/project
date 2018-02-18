@@ -9,11 +9,11 @@
     <div class="pageTitle-container">
 
       <div class="page-back">
-        <a href="/{{categoryTitle}}/{{itemId}}/show"> &lt; Back  </a>
+        <a href="/{{categoryTitle}}/{{itemId}}/info"> &lt; Back  </a>
       </div>
 
       <div class="page-title">
-        info
+        web
       </div>
 
       <div class="page-filter">
@@ -21,33 +21,15 @@
       </div>
 
     </div>
-    <div id="desc" class="page-subtitle">
-      Title
-    </div>
-    <div class="page-box page-box-padding basic-padding">
-      {{itemTitle}}
-    </div>
-
-    <div class="page-subtitle">
-      Description
-    </div>
-
-    <div class="page-box page-box-padding basic-padding">
-      {{description}}
-    </div>
-
-    {{#each extra}}
-    <div class="page-subtitle">
-      {{title}}
-    </div>
-        {{{contentHTML}}}
-        {{#each container}}
-          {{{mediaHTML}}}
-        {{/each}}
-   {{/each}}
 
 
     <div class="nav-cover">
+    </div>
+
+    <div class="pageContent-container">
+      <iframe src="{{URL}}" width="100%" height="800"></iframe>
+
+
     </div>
 
     <!-- SPACE FOR POPUP -->
@@ -62,7 +44,6 @@
   </div>
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="/js/info.js"></script>
   <script src="/js/jquery-1.11.0.js"></script>
   <script src="/js/bootstrap.js"></script>
 
