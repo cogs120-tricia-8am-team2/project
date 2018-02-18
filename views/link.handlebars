@@ -1,13 +1,14 @@
 {{>header}}
   <link href="/css/play.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/link.css">
 </head>
 <body>
 
   <div class="page-container">
 
     <div class="pageTitle-container">
-        <div class="page-back">
-          <a id="back" href="/"> &lt; Back  </a>
+        <div class="page-logo">
+          <a id="back" href="/"> LOGO </a>
         </div>
 
 
@@ -17,19 +18,18 @@
 
 
         <div class="page-filter">
-          Filter
+          Login
         </div>
     </div>
 
     <div class="pageContent-container">
       <div class="page-media">
         {{{type}}}
-        <a href="/{{pageTitle}}/left"><img id="arrow-left" src="/images/icons/arrow-left.svg" alt=""></a>
-        <a href="/{{pageTitle}}/right"><img id="arrow-right" src="/images/icons/arrow-right.svg" alt=""></a>
       </div>
       <div id="nav-cover-top">
 
       </div>
+
       <div id="more-options">
         <div style="width: 100%;height:6rem;" class="page-media-more fixed-action-btn horizontal click-to-toggle">
           <span id="page-media-title">{{itemTitle}}</span>
@@ -41,12 +41,17 @@
               <li><a href="/{{pageTitle}}/{{itemID}}/share" id="share-btn" class="btn-floating more-options-btns"><i class="material-icons">Share</i></a></li>
               <li><a class="btn-floating darken-1 more-options-btns"><i class="material-icons">Save</i></a></li>
               <li><a class="btn-floating more-options-btns"><i class="material-icons">Like</i></a></li>
-              <li><a href="/{{pageTitle}}/{{itemID}}/info" class="btn-floating more-options-btns"><i class="material-icons">Info</i></a></li>
+              <li><a href="/sharedlink/{{itemID}}/show/info" class="btn-floating more-options-btns"><i class="material-icons">Info</i></a></li>
             </ul>
           </div>
       </div>
+      <div class="page-subtitle">
 
-
+      </div>
+      <div class="page-box">
+        {{des}}
+      </div>
+      {{>footer}}
 
     </div>
 
@@ -54,36 +59,7 @@
     <div id="profile_popup" class="modal"> </div>
 
 
-    <div class="nav-share-2 chatroom-btns-layout">
-      {{#if isScreenShared}}
-        <div id="exitChatroom" class="chatroom-btns displayNone">
-          Exit Chatroom
-        </div>
-        <div id="up" class="chatroom-btns chatroom-btns-last displayNone">
-          UP
-        </div>
-      {{/if}}
-      </div>
-      {{#if isScreenShared}}
-          <div class="nav-share chatroom-btns-layout">
-            <div id="exitSharing" class="chatroom-btns">
-              Exit Sharing
-            </div>
-            <div id="enterChatroom" class="chatroom-btns chatroom-btns-last">
-              Enter Chatroom
-            </div>
-          </div>
-      {{/if}}
 
-    </div>
-    <!-- BOTTOM NAVIGATION BAR -->
-{{#if isScreenShared}}
-    <div class="chat-view displayNone">
-      <iframe id="myFrame" src="https://chat-seo.herokuapp.com" width="100%" height="auto"></iframe>
-    </div>
-{{/if}}
-    <!-- BOTTOM NAVIGATION BAR -->
-    {{>navigation}}
 
 
 
