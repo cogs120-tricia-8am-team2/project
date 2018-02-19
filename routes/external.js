@@ -15,6 +15,7 @@ exports.view = function(req, res){
   console.log(data[itemId].extraInfo[1].container.length);
 	res.render('external', {
     'categoryTitle':categoryTitle,
-    'itemId':itemId
+    'itemId':itemId,
+    'loginStatus' : userData.loginStatus
   });
 };

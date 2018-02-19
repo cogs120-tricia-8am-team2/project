@@ -7,24 +7,33 @@
   "isScreenShared": false,
   "categoryList": [],
   "randomList": [],
-  "favoriteList": [{
-    "title": "Activities",
-    "id": "activities"
-  }, {
-    "title": "Food",
-    "id": "food"
-  }, {
-    "title": "Travel",
-    "id": "travel"
-  }, {
-    "title": "Movies",
-    "id": "movies"
-  }, {
-    "title": "Pets",
-    "id": "pets"
-  }, {
-    "title": "Home",
-    "id": "home"
-  }],
+  "favoriteList": 
+  [
+    {
+      "title": "Activities",
+      "id": "activities"
+    }, 
+    {
+      "title": "Food",
+      "id": "food"
+    }, 
+    {
+      "title": "Travel",
+      "id": "travel"
+    }, 
+    {
+      "title": "Movies",
+      "id": "movies"
+    }, 
+    {
+      "title": "Pets",
+      "id": "pets"
+    }, 
+    {
+      "title": "Home",
+      "id": "home"
+    }
+  ],
+
   "userList": []
 }

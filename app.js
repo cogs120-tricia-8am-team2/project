@@ -9,6 +9,9 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
+var browse = require('./routes/browse');
+var profile = require('./routes/profile');
+
 var dataSelector = require('./routes/dataSelector');
 var right = require('./routes/right');
 var left = require('./routes/left');
@@ -42,7 +45,11 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', index.view);
-app.get('/itemID/share')
+app.get('/browse', browse.view);
+app.get('/profile', profile.view);
+app.get('/profile_register', profile.register);
+
+app.get('/itemID/share');
 app.get('/sharedlink/:itemId/show', share.linkview);
 app.get('/sharedlink/:itemId/show/info', share.infoview);
 app.get('/:categoryTitle', dataSelector.view);

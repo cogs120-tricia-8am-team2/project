@@ -58,7 +58,8 @@ exports.view = function(req, res) {
     'type': mediaHTML,
     'itemTitle' : itemTitle,
     'caption': caption,
-    'itemID': itemID
+    'itemID': itemID,
+    'loginStatus' : userData.loginStatus
   });
 
 };

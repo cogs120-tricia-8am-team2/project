@@ -42,6 +42,7 @@ else {
   }
 
 }
+
 var userList = userData.userList;
 
 
@@ -49,6 +50,7 @@ exports.view = function(req, res){
   userData.currentItemIndex = 0;
   res.render('index', {
     'currentCategorySelected': userData.currentCategorySelected,
-    'currentUserCategoryList': userList
+    'currentUserCategoryList': userList,
+    'loginStatus': userData.loginStatus,
   });
 };

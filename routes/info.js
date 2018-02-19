@@ -52,7 +52,8 @@ exports.view = function(req, res) {
     'itemId': itemId,
     'description': itemDescription,
     'extra': itemExtraInfo,
-    'mediaHTML': mediaHTML
+    'mediaHTML': mediaHTML,
+    'loginStatus' : userData.loginStatus
 
   });
 };

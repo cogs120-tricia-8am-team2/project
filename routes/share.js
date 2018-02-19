@@ -28,7 +28,8 @@ exports.linkview = function(req, res) {
     "itemTitle": itemTitle,
     "caption": itemObj.caption,
     "des": itemObj.summary,
-    "itemID" : itemId
+    "itemID" : itemId,
+    'loginStatus' : userData.loginStatus
   });
 };
 
@@ -67,7 +68,8 @@ exports.view = function(req, res) {
     'itemTitle': itemTitle,
     'itemId': itemId,
     'mediaHTML': mediaHTML,
-    'itemIdTotal':itemId
+    'itemIdTotal':itemId,
+    'loginStatus' : userData.loginStatus
   });
 };
 
@@ -119,7 +121,8 @@ exports.infoview = function(req, res) {
     'itemId': itemId,
     'description': itemDescription,
     'extra': itemExtraInfo,
-    'mediaHTML': mediaHTML
+    'mediaHTML': mediaHTML,
+    'loginStatus' : userData.loginStatus
 
   });
 };

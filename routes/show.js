@@ -49,6 +49,7 @@ exports.view = function(req, res){
     'itemTitle' : categoryList[index-1].itemTitle,
     'caption': categoryList[index-1].caption,
     'itemID': categoryList[index-1].id,
-    'isScreenShared' : userData.isScreenShared
+    'isScreenShared' : userData.isScreenShared,
+    'loginStatus' : userData.loginStatus
   });
 };
