@@ -1,5 +1,5 @@
 var userData = require('../userData.json');
-
+var categoryList = require('../categoryListData.json');
 
 
 
@@ -59,7 +59,8 @@ exports.view = function(req, res) {
     'itemTitle' : itemTitle,
     'caption': caption,
     'itemID': itemID,
-    'loginStatus' : userData.loginStatus
+    'loginStatus' : userData.loginStatus,
+     categoryList
   });
 
 };

@@ -1,5 +1,6 @@
 var userData = require('../userData.json');
 var data = require('../data.json');
+var categoryList = require('../categoryListData.json');
 
 
 exports.linkview = function(req, res) {
@@ -29,7 +30,8 @@ exports.linkview = function(req, res) {
     "caption": itemObj.caption,
     "des": itemObj.summary,
     "itemID" : itemId,
-    'loginStatus' : userData.loginStatus
+    'loginStatus' : userData.loginStatus,
+     categoryList
   });
 };
 
@@ -69,7 +71,8 @@ exports.view = function(req, res) {
     'itemId': itemId,
     'mediaHTML': mediaHTML,
     'itemIdTotal':itemId,
-    'loginStatus' : userData.loginStatus
+    'loginStatus' : userData.loginStatus,
+     categoryList
   });
 };
 
@@ -122,7 +125,8 @@ exports.infoview = function(req, res) {
     'description': itemDescription,
     'extra': itemExtraInfo,
     'mediaHTML': mediaHTML,
-    'loginStatus' : userData.loginStatus
+    'loginStatus' : userData.loginStatus,
+     categoryList
 
   });
 };

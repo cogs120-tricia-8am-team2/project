@@ -1,6 +1,7 @@
 //database
 var userData = require('../userData.json');
 var data = require('../data.json');
+var categoryList = require('../categoryListData.json');
 
 //env setting
 var numberOfItemsSelected = 10;
@@ -127,5 +128,6 @@ exports.view = function(req, res){
     'itemID': categoryList[itemIndex].id,
     'isScreenShared' : userData.isScreenShared,
     'loginStatus': userData.loginStatus,
+     categoryList
   });
 };

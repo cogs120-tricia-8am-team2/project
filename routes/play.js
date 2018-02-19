@@ -1,5 +1,5 @@
 var data = require('../data.json');
-
+var categoryList = require('../categoryListData.json');
 
 //function : it makes a first char in a string capital
 //for Category title
@@ -38,6 +38,7 @@ exports.view = function(req, res){
     'isScreenShared' : isScreenShared,
     'allCategoryList' : allCategoryList,
     'currentCategorySelected' : currentCategorySelected,
-    'loginStatus' : userData.loginStatus
+    'loginStatus' : userData.loginStatus,
+     categoryList
   });
 };

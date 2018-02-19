@@ -1,6 +1,6 @@
 var userData = require('../userData.json');
 var data = require('../data.json');
-
+var categoryList = require('../categoryListData.json');
 
 exports.view = function(req, res) {
   var categoryTitle = req.params.categoryTitle;
@@ -53,7 +53,8 @@ exports.view = function(req, res) {
     'description': itemDescription,
     'extra': itemExtraInfo,
     'mediaHTML': mediaHTML,
-    'loginStatus' : userData.loginStatus
+    'loginStatus' : userData.loginStatus,
+     categoryList
 
   });
 };

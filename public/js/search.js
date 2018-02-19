@@ -1,6 +1,5 @@
 
 document.getElementById("allCategoryUL").style.display = "none";
-document.getElementById("popularCategoryUL").style.display = "";
 
 
 function myFunction() {
@@ -11,11 +10,9 @@ function myFunction() {
 
     if (input.value == '') { 
       document.getElementById("allCategoryUL").style.display = "none";
-      document.getElementById("popularCategoryUL").style.display = "";
     }
     else {
       document.getElementById("allCategoryUL").style.display = "";
-      document.getElementById("popularCategoryUL").style.display = "none";
     }
 
     filter = input.value.toUpperCase();

@@ -1,6 +1,7 @@
 //variables
 var data = require('../data.json');
 var userData = require('../userData.json');
+var categoryList = require('../categoryListData.json');
 
 exports.view = function(req, res){
     var loginStatus = userData.loginStatus;
@@ -28,5 +29,8 @@ exports.register = function(req, res) {
 	userData.loginStatus = true;
 	userData.userName = req.query.name;
 	console.log("login status: "+userData.loginStatus);
-	res.render('profile', userData);
+	res.render('profile', {
+    userData,
+    categoryList
+  });
 };

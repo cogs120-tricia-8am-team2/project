@@ -1,6 +1,6 @@
 //database
 var data = require('../data.json');
-
+var categoryList = require('../categoryListData.json');
 
 
 exports.view = function(req, res){
@@ -16,6 +16,7 @@ exports.view = function(req, res){
 	res.render('external', {
     'categoryTitle':categoryTitle,
     'itemId':itemId,
-    'loginStatus' : userData.loginStatus
+    'loginStatus' : userData.loginStatus,
+     categoryList
   });
 };
