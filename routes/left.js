@@ -56,8 +56,10 @@ exports.view = function(req, res) {
     'itemTitle' : itemTitle,
     'caption': caption,
     'itemID': itemID,
-    'loginStatus' : userData.loginStatus,
-     categoryList
+    'isScreenShared' : userData.isScreenShared,
+    'userIdNumber': userData.userIdNumber,
+    'isAtChatroom': userData.isAtChatroom,
+      categoryList
   });
 
 };

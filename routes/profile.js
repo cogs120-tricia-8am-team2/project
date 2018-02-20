@@ -1,4 +1,3 @@
-//variables
 var data = require('../data.json');
 var userData = require('../userData.json');
 var categoryList = require('../categoryListData.json');
@@ -7,7 +6,7 @@ exports.view = function(req, res){
     var loginStatus = userData.loginStatus;
 
     console.log("User is loggeed in: "+loginStatus);
-    
+
     if (!loginStatus) { //not logged in; show pop up
     	res.render('profile_popup');
     }
@@ -19,17 +18,19 @@ exports.view = function(req, res){
 
 exports.register = function(req, res) {
 	console.log("register");
-	var newUser = 
+	var newUser =
 	{
       "name": req.query.name,
       "email": req.query.email,
-      "password": req.query.password
+      "password": req.query.password,
+      "username": req.query.username
 	};
-	userData.userList.push(newUser);
+  //TODO: need to fix here. userdata should push into wholeUserData Json.
+	//userData.userList.push(newUser);
 	userData.loginStatus = true;
 	userData.userName = req.query.name;
 	console.log("login status: "+userData.loginStatus);
-	res.render('profile', {
+	res.render('preference', {
     userData,
     categoryList
   });

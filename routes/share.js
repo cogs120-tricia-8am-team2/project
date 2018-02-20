@@ -1,5 +1,6 @@
 var userData = require('../userData.json');
 var data = require('../data.json');
+var wholeUserData = require('../wholeUserData.json');
 var categoryList = require('../categoryListData.json');
 
 
@@ -29,9 +30,7 @@ exports.linkview = function(req, res) {
     "itemTitle": itemTitle,
     "caption": itemObj.caption,
     "des": itemObj.summary,
-    "itemID" : itemId,
-    'loginStatus' : userData.loginStatus,
-     categoryList
+    "itemID" : itemId
   });
 };
 
@@ -41,22 +40,27 @@ exports.view = function(req, res) {
   var itemObj = data[itemId];
   var itemTitle = itemObj.itemTitle;
   var mediaHTML = '';
-  var categoryList = userData.categoryList;
+  var categoryListUser = userData.categoryList;
   var currentItemIndex = userData.currentItemIndex;
-  console.log(userData.categoryList.length);
-  console.log(categoryList[itemId]);
-  console.log(currentItemIndex);
+  var userIdNumber = 0;
+  if (userData.loginStatus) {
+    userIdNumber = userData.userIdNumber;
+  }
+  else {
+    // dummy data
+    userIdNumber = 0;
+  }
 
 
 
-  switch (categoryList[currentItemIndex].type) {
+  switch (categoryListUser[currentItemIndex].type) {
     case 'image':
         console.log('image Type');
-        mediaHTML = '<div class="preview-content"><img id="media" src="'+categoryList[currentItemIndex].URL+'" alt=""></div>';
+        mediaHTML = '<div class="preview-content"><img id="media" src="'+categoryListUser[currentItemIndex].URL+'" alt=""></div>';
         break;
     case 'video':
           console.log('video Type');
-          mediaHTML = '<video style="width:100%;" controls><source src='+ categoryList[currentItemIndex].URL+' type=video/mp4></video>';
+          mediaHTML = '<video style="width:100%;" controls><source src='+ categoryListUser[currentItemIndex].URL+' type=video/mp4></video>';
           break;
 
     default:
@@ -65,14 +69,15 @@ exports.view = function(req, res) {
   }
 
 
+
   res.render('share', {
     'categoryTitle': categoryTitle,
     'itemTitle': itemTitle,
     'itemId': itemId,
     'mediaHTML': mediaHTML,
     'itemIdTotal':itemId,
-    'loginStatus' : userData.loginStatus,
-     categoryList
+    'userIdNumber':userIdNumber,
+    categoryList
   });
 };
 
@@ -83,6 +88,8 @@ exports.infoview = function(req, res) {
   var itemDescription = itemObj.summary;
   var itemExtraInfo = itemObj.extraInfo;
   var mediaHTML ='';
+  console.log(itemExtraInfo.length);
+  console.log(itemObj);
   if(itemExtraInfo.length > 0){
     console.log("item found");
 
@@ -124,9 +131,49 @@ exports.infoview = function(req, res) {
     'itemId': itemId,
     'description': itemDescription,
     'extra': itemExtraInfo,
-    'mediaHTML': mediaHTML,
-    'loginStatus' : userData.loginStatus,
-     categoryList
+    'mediaHTML': mediaHTML
+
+  });
+};
+
+exports.shareview = function(req, res) {
+  var categoryTitle = req.params.categoryTitle;
+  var itemId = req.params.itemId;
+  var itemObj = data[itemId];
+  var itemTitle = itemObj.itemTitle;
+  var itemDescription = itemObj.summary;
+  var itemExtraInfo = itemObj.extraInfo;
+  var mediaHTML ='';
+
+
+  console.log(itemExtraInfo.length);
+  console.log(itemObj);
+
+  switch (itemObj.type) {
+    case 'image':
+        console.log('image Type');
+        mediaHTML = '<div class="preview-content"><img id="media" src="'+itemObj.URL+'" alt=""></div>';
+        break;
+    case 'video':
+          console.log('video Type');
+          mediaHTML = '<video style="width:100%;" controls><source src='+ itemObj.URL+' type=video/mp4></video>';
+          break;
+
+    default:
+        console.log('check mediaType!');
+        break;
+  }
+
+
+
+
+  res.render('linkshare', {
+    'categoryTitle': categoryTitle,
+    'itemTitle': itemTitle,
+    'itemId': itemId,
+    'description': itemDescription,
+    'extra': itemExtraInfo,
+    'mediaHTML': mediaHTML
 
   });
 };
