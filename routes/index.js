@@ -1,7 +1,7 @@
 //database
 var userData = require('../userData.json');
 var popularCategoryList = require('../popularCategoryListData.json');
-
+var categoryList = require('../categoryListData.json');
 //variables
 var loginStatus = userData.loginStatus;
 
@@ -23,6 +23,7 @@ if (loginStatus) {
   userData.currentCategorySelected = "Favorite";
   // copy 4 most favorite categories
   // from favoriteList to userList in userData.json
+  userData.userList=[];
   for (var i = 0; i < 4; i++) {
     userData.userList.push(favoriteList[i]);
   }
@@ -37,6 +38,7 @@ else {
 
   // copy 4 most popular categories
   // from popularCategoryList to userList in userData.json
+  userData.userList=[];
   for (var i = 0; i < 4; i++) {
     userData.userList.push(popularCategoryList[i]);
   }
@@ -47,8 +49,11 @@ var userList = userData.userList;
 
 exports.view = function(req, res){
   userData.currentItemIndex = 0;
+  console.log(userList);
   res.render('index', {
     'currentCategorySelected': userData.currentCategorySelected,
-    'currentUserCategoryList': userList
+    'currentUserCategoryList': userList,
+    'loginStatus': userData.loginStatus,
+    categoryList
   });
 };
