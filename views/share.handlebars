@@ -4,11 +4,8 @@
 <link href="/css/profile.css" rel="stylesheet">
 <link href="/css/share.css" rel="stylesheet">
 </head>
-
-<body>
-
   {{>searchbar}}
-  
+<body>
   <div class="page-container">
     <div class="pageTitle-container">
 
@@ -59,7 +56,10 @@
     </div>
     <div class="page-box page-box-padding basic-padding share">
       <input style="margin-top:1rem; border: 0px; width:95%; height:1.5rem; font-size:1.5rem;" type="text" name="" value="" placeholder="UserName">
-      <div class="shareBtn">Send</div>
+      <a id="group-chat-send-a" href="/userData/{{userIdNumber}}/{{categoryTitle}}/{{itemId}}/setShare"><div id="group-chat-send" class="shareBtn">Send</div></a>
+    </div>
+    <div id="group-chat-link">
+      localhost:3000/sharedchat/{{userIdNumber}}/show
     </div>
 
 
@@ -79,14 +79,8 @@
 
   </div>
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="/js/info.js"></script>
-  <script src="/js/jquery-1.11.0.js"></script>
-  <script src="/js/bootstrap.js"></script>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script src="/js/search.js"></script>
-  <script src="/js/profile.js"></script>
 
+  		{{>script}}
 </body>
 
 </html>

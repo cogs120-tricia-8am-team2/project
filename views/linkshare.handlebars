@@ -2,6 +2,7 @@
 
 <link rel="stylesheet" href="/css/info.css">
 <link href="/css/profile.css" rel="stylesheet">
+<link href="/css/share.css" rel="stylesheet">
 </head>
 
 <body>
@@ -13,38 +14,45 @@
       </div>
 
       <div class="page-title">
-        info
+        share
       </div>
 
       <div class="page-filter">
-        Save
+
       </div>
 
     </div>
-    <div id="desc" class="page-subtitle">
-      Title
+    <div id="desc">
+
     </div>
-    <div class="page-box page-box-padding basic-padding">
-      {{itemTitle}}
+
+    <div class="preview">
+
+        {{{mediaHTML}}}
+
     </div>
 
     <div class="page-subtitle">
-      Description
+      Send a Sharable Link to Others
+    </div>
+    <div class="page-box page-box-padding basic-padding share">
+      <input style="margin-top:1rem; border: 0px; width:95%; height:1.5rem; font-size:1.5rem;" type="text" name="" value="" placeholder="Email Address">
+      <div class="shareBtn">Send</div>
     </div>
 
-    <div class="page-box page-box-padding basic-padding">
-      {{description}}
-    </div>
-
-    {{#each extra}}
     <div class="page-subtitle">
-      {{title}}
+      Get a Sharable Link
     </div>
-        {{{contentHTML}}}
-        {{#each container}}
-          {{{mediaHTML}}}
-        {{/each}}
-   {{/each}}
+    <div class="page-box page-box-padding basic-padding share">
+      <div style="margin-top:1rem; border: 0px; width:95%; height:1.5rem; font-size:1rem;" class="url">
+        localhost:3000/sharedlink/{{itemId}}/show
+      </div>
+      <div class="shareBtn">Copy</div>
+
+    </div>
+
+
+
 
 
     <div class="nav-cover">
@@ -54,8 +62,8 @@
     <div id="profile_popup" class="modal"> </div>
 
 
+    <!-- BOTTOM NAVIGATION BAR -->
 
-    {{>footer}}
 
 
 
