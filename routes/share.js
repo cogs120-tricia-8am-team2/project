@@ -178,6 +178,7 @@ exports.shareview = function(req, res) {
     'extra': itemExtraInfo,
     'mediaHTML': mediaHTML,
     'loginStatus': userData.loginStatus
+    
 
   });
 };
