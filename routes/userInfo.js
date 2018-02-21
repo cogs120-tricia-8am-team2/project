@@ -51,7 +51,8 @@ exports.view = function(req, res) {
     'mediaHTML': mediaHTML,
     'itemIdTotal':itemId,
     'userIdNumber' : userIdNumber,
-    categoryList
+    categoryList,
+    'loginStatus': userData.loginStatus
   });
 };
 
@@ -106,7 +107,8 @@ exports.view2 = function(req, res) {
     'itemID': categoryListUser[index-1].id,
     'isScreenShared' : userData.isScreenShared,
     'userIdNumber': userData.userIdNumber,
-    categoryList
+    categoryList,
+    'loginStatus': userData.loginStatus
   });
 };
 
@@ -163,7 +165,8 @@ exports.enterChatRoom = function(req, res) {
     'isScreenShared' : userData.isScreenShared,
     'userIdNumber': userData.userIdNumber,
     'isAtChatroom': userData.isAtChatroom,
-    categoryList
+    categoryList,
+    'loginStatus': userData.loginStatus
   });
 };
 
@@ -221,7 +224,8 @@ exports.exitChatRoom = function(req, res) {
     'isScreenShared' : userData.isScreenShared,
     'userIdNumber': userData.userIdNumber,
     'isAtChatroom': userData.isAtChatroom,
-    categoryList
+    categoryList,
+    'loginStatus': userData.loginStatus
   });
 };
 
@@ -281,7 +285,8 @@ exports.exitChatRoomInfo = function(req, res) {
     'mediaHTML': mediaHTML,
     'isScreenShared' : userData.isScreenShared,
     'userIdNumber': userData.userIdNumber,
-    'isAtChatroom': userData.isAtChatroom
+    'isAtChatroom': userData.isAtChatroom,
+    'loginStatus': userData.loginStatus
 
   });
 };
@@ -342,7 +347,8 @@ exports.enterChatRoomInfo = function(req, res) {
     'mediaHTML': mediaHTML,
     'isScreenShared' : userData.isScreenShared,
     'userIdNumber': userData.userIdNumber,
-    'isAtChatroom': userData.isAtChatroom
+    'isAtChatroom': userData.isAtChatroom,
+    'loginStatus': userData.loginStatus
 
   });
 };
@@ -404,7 +410,8 @@ exports.exitShareInfo = function(req, res) {
     'mediaHTML': mediaHTML,
     'isScreenShared' : userData.isScreenShared,
     'userIdNumber': userData.userIdNumber,
-    'isAtChatroom': userData.isAtChatroom
+    'isAtChatroom': userData.isAtChatroom,
+    'loginStatus': userData.loginStatus
 
   });
 };
@@ -461,6 +468,7 @@ exports.shareView = function(req, res) {
       'isScreenShared' : userData.isScreenShared,
       'userIdNumber': userData.userIdNumber,
       'isAtChatroom': userData.isAtChatroom,
+      'loginStatus': userData.loginStatus,
       categoryList
     });
 };
